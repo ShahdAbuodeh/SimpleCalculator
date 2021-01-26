@@ -127,6 +127,82 @@ class CalculatorForm extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent ae)
     {
 
+        String str = ae.getActionCommand();
+        if(str.equals("1"))
+        {
+            label.setText(label.getText()+button1.getText());
+        }
+        else if(str.equals("2"))
+        {
+            label.setText(label.getText()+button2.getText());
+        }
+        else if(str.equals("3"))
+        {
+            label.setText(label.getText()+button3.getText());
+        }
+        else if(str.equals("4"))
+        {
+            label.setText(label.getText()+button4.getText());
+        }
+        else if(str.equals("5"))
+        {
+            label.setText(label.getText()+button5.getText());
+        }
+        else if(str.equals("6"))
+        {
+            label.setText(label.getText()+button6.getText());
+        }else if(str.equals("7"))
+        {
+            label.setText(label.getText()+button7.getText());
+        }
+        else if(str.equals("8"))
+        {
+            label.setText(label.getText()+button8.getText());
+        }
+        else if(str.equals("9"))
+        {
+            label.setText(label.getText()+button9.getText());
+        }
+        else if(str.equals("0"))
+        {
+            label.setText(label.getText()+button0.getText());
+        }else if(str.equals("."))
+        {
+            label.setText(label.getText()+buttonDot.getText());
+        }else if(str.equals("="))
+        {
+            System.out.println(label.getText()+"**********************");
+            calculator Es = new calculator(label.getText());
+            result = Es.Result();
+            String ans = Double.toString(result);
+            label.setText(ans);
+            //label.setText(label.getText()+buttonEq.getText());
+        }
+        else if(str.equals("+"))
+        {
+            label.setText(label.getText()+buttonA.getText());
+        }else if(str.equals("-"))
+        {
+            label.setText(label.getText()+buttonS.getText());
+        }else if(str.equals("*"))
+        {
+            label.setText(label.getText()+buttonM.getText());
+        }else if(str.equals("/"))
+        {
+            label.setText(label.getText()+buttonD.getText());
+        }else if(str.equals("BackSpace"))
+        {
+            String temp = label.getText(); int len = temp.length();
+            if (len!=0) {
+                temp = temp.substring(0, len - 1);
+                label.setText(temp);
+            }
+        }else if(str.equals("Clear"))
+        {
+
+            label.setText("");
+        }
+        else{}
     }
 
 }
