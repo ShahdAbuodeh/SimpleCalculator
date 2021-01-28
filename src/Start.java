@@ -5,7 +5,7 @@ class Start
         CalculatorForm g = new CalculatorForm();
         g.setVisible(true);
         System.out.println("hello ");
-        System.out.println("hello2 ");
+        System.out.println("hello1gitt ");
 
     }
 }
